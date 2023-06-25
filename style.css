@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'Caracas Demibold';
+    src: url('CaracasDemibold.eot');
+    src: url('CaracasDemibold.eot?#iefix') format('embedded-opentype'),
+    url('CaracasDemibold.woff') format('woff'),
+    url('CaracasDemibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }   
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    animation: initial-animation 2s ease;
+    font-family: 'Caracas Demibold';
+    
+}   
+@keyframes initial-animation{
+    from{
+        transform: translateY(-1000px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+    height: auto;
+    width: 100%;
+    
+}
+#barraGeral{
+  
+    display: flex;
+
+    
+
+
+    width: 200px;
+    height: 20px;
+    border-radius: 30px;
+    background-color: #fff;
+    
+}
+#formatBarra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f6be00;
+}
+.barra{
+
+    width: 20%;
+    height: 100%;
+    border-left: 1px solid #272725;
+    transition-duration: 5s ;
+    animation-timing-function: ease;
+}
+.mudarCorB2{background-color:  #7FFF00;}
+.mudarCorB3{background-color:  #FFFF00;}
+.mudarCorB4{background-color: #FFA500;}
+.mudarCorB5{background-color: #FF0000;}
+#barra1{
+   
+   border-top-left-radius: 30px;
+   border-bottom-left-radius: 30px;
+   background-color: #00FF00;
+    
+}
+
+#barra5{
+
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+   
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #272725;
+    box-shadow: 0px 0px 7px rgba(0,  0, 0, 0.8);
+    
+}
+.menu img{
+    width: 200px;
+}
+
+.conteudo{
+    display:flex;
+    flex-direction: column;
+    
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    box-sizing: border-box;
+
+    background-image: url('fundo2.png');
+    background-size: cover;
+}
+.memory-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+    
+    gap:40px;
+    box-sizing: border-box;
+
+}
+
+
+.card-memory{
+    
+    display: flex;
+
+
+    width: 15%;
+    height: 250px;
+    
+   border-radius: 15px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.8);
+    position: relative;
+
+    
+
+    transition:  400ms ease;
+    transform-style: preserve-3d;
+    
+    cursor: pointer;    
+    
+}
+.move-card{
+    transform: translateY(-20px);
+}
+
+
+
+.card{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+}
+.frontface{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('frenteCarta.png');
+    background-size: cover;
+    background-position: center;
+    
+    word-break: break-all;
+   
+    color: #f6be00;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    font-size: 10px;
+    
+}
+
+.backface{
+    border: 3px solid #f6be00;
+    background-image: url('VersoCarta.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+  
+    
+}
+.revelar-carta{
+    transform: rotateY(180deg);
+    border: none;
+   
+}
+
+
+footer{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #272725;
+    box-shadow: 0px 0px 7px rgba(0,  0, 0, 0.8);
+    color:#f6be00;
+}
+
+@media screen and (max-width: 900px) {
+    .conteudo{
+        padding: 0;
+    }
+    .memory-cards{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    
+}
